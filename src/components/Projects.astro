@@ -4,6 +4,10 @@ import Card from "./Card.astro";
 const projects = await getCollection('projects');
 ---
 <section id="projects"> 
+    <header class="pt-5 mb-4">
+        <h1>Proyectos</h1>
+        <p>Diseño y desarrollo de aplicaciones web.</p>
+    </header>
     {projects.map((project: any) => (
         <>
             <div transition:name={`hero-${project.slug}`}>

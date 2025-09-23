@@ -4,9 +4,9 @@ import Card from "./Card.astro";
 const projects = await getCollection('projects');
 ---
 <section id="projects"> 
-    <header class="pt-5 mb-4">
-        <h1>Proyectos</h1>
-        <p>Diseño y desarrollo de aplicaciones web.</p>
+    <header class=" mb-5">
+        <h1 class="m-0">Proyectos</h1>
+        <p class="text-secondary">Diseño y desarrollo de aplicaciones web.</p>
     </header>
     {projects.map((project: any) => (
         <>

@@ -1,11 +1,9 @@
 ---
-title: 'Trendify - Landing page'
-description: 'Sitio web de una plataforma de streaming de música'
+title: 'Triptidy'
+description: 'Aplicación web y movil para la gestion de viajes y acampadas'
 pubDate: '2023-10-25'
-heroImage: '/p1.png'
-tag: 'Astro'
+heroImage: '/p2.png'
+tag: 'UX/UI desing'
 ---
 
-#### Contenido del Proyecto
-
-Aquí puedes escribir el contenido de tu proyecto. Puedes usar Markdown para dar formato al texto, agregar imágenes, enlaces, etc.
+#### Introducción

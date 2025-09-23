@@ -25,7 +25,7 @@ const { Content } = await project.render();
         </ol>
       </nav>
       <article class="py-3">
-        <img src={project.data.heroImage} alt={project.data.description} class="img-fluid rounded-4 mb-4" transition:name={`hero-${project.slug}`}>
+        <img src={project.data.heroImage} alt={project.data.description} class="img-fluid rounded-2 mb-4" transition:name={`hero-${project.slug}`}>
         <header class="mb-5">
           <h1 class="fs-4 fw-bold" transition:name={`title-${project.slug}`}>{project.data.title}</h1>
           <p class="text-secondary">{project.data.description}</p>

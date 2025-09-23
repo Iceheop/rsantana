@@ -1,0 +1,17 @@
+<footer class="my-5 py-5">
+    <p class="text-secondary"><span id="hora"></span></p>
+</footer>
+
+<script>
+    function actualizarHora(): void {
+        const ahora = new Date();
+        const hora: string = ahora.toLocaleTimeString();
+        const horaElem = document.getElementById("hora");
+        if (horaElem) {
+            horaElem.textContent = hora;
+        }
+    }
+
+    actualizarHora();
+    setInterval(actualizarHora, 1000);
+</script>

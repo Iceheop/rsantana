@@ -1,0 +1,21 @@
+---
+import { getCollection } from 'astro:content';
+import Card from "./Card.astro";
+const projects = await getCollection('projects');
+---
+<section id="projects"> 
+    {projects.map((project: any) => (
+        <>
+            <div transition:name={`hero-${project.slug}`}>
+                <Card 
+                    src={project.data.heroImage}
+                    description={project.data.description}
+                    title={project.data.title}
+                    tag={project.data.tag}
+                    url={`/projects/${project.slug}`}
+                />
+            </div>
+            <br>
+        </>
+    ))}
+</section>

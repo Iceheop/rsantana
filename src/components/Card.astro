@@ -1,0 +1,38 @@
+---
+interface Props {
+    src: string;
+    description: string;
+    title: string;
+    tag: string;
+    url: string;
+}
+const { src, description, title, tag, url } = Astro.props;
+---
+
+<article>
+    <a href={url} class="text-decoration-none">
+        <section class="w-100 ratio ratio-16x9 rounded-4 overflow-hidden">
+            <img src={src} alt={description} class="img-fluid object-fit-cover rounded-2">
+            <section class="bg-dark w-100 h-100 opacity-50"></section>
+        </section>
+        <section class="mt-2 d-flex flex-column j">
+            <h2 class="fs-5 fw-bold mb-1">{title}</h2>
+            <h2 class="fs-6 text-secondary">{tag}</h2>
+        </section>
+    </a>
+</article>
+
+<style>
+    article {
+        max-height: 450px;
+        img {
+            transform: translate(3rem,3rem) rotate(-3deg);
+            transition: transform 0.5s ease-in-out;
+        }
+    }
+    article:hover {
+        img {
+            transform: translate(3rem,2.1rem) rotate(0deg) scale(1.1);
+        }
+    }
+</style>

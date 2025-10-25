@@ -1,14 +1,13 @@
 ---
 interface Props {
 	title: string;
-	theme: string;
 }
 
-const { title, theme } = Astro.props;
+const { title } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="es" data-bs-theme={theme}>
+<html lang="es">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="description" content="David Lorenzo portfolio" />
@@ -24,7 +23,7 @@ const { title, theme } = Astro.props;
 		<link href="https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap" rel="stylesheet">
 		<title>{title}</title>
 	</head>
-	<body>
+	<body class="overflow-x-hidden">  
 		<main class="mx-auto px-4">
 			<slot />
 		</main>
@@ -36,8 +35,7 @@ const { title, theme } = Astro.props;
 <style is:global>
 	:root {
 		--primary: #1E1E1E;
-		--secondary: #f1f1f1;
-		--bg: #0C0C0C;
+		--bg: #f1f1f1;
 	}
 	body {
 		background-color: var(--bg);
@@ -50,6 +48,6 @@ const { title, theme } = Astro.props;
 		height: 100%;
 	}
 	a {
-		color: var(--secondary) !important;
+		color: var(--primary) !important;
 	}
 </style>

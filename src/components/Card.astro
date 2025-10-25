@@ -11,13 +11,13 @@ const { src, description, title, tag, url } = Astro.props;
 
 <article>
     <a href={url} class="text-decoration-none">
-        <section class="w-100 ratio ratio-16x9 rounded-2 overflow-hidden">
-            <img src={src} alt={description} class="img-fluid object-fit-cover rounded-2">
-            <section class="bg-dark w-100 h-100 opacity-50"></section>
-        </section>
-        <section class="mt-2 d-flex flex-column j">
-            <h2 class="fs-5 fw-bold mb-1">{title}</h2>
-            <h2 class="fs-6 text-secondary">{tag}</h2>
+        <section class="w-100 ratio ratio-16x9 rounded-2 overflow-hidden position-relative">
+            <img src={src} alt={description} class="img-fluid object-fit-scale rounded-2">
+            <section class="bg-dark w-100 h-100 opacity-50 position-absolute top-0 start-0"></section>
+            <section class="position-absolute bottom-0 start-0 w-100 p-4 text-white">
+                <h2 class="fs-5 fw-bold mb-1">{title}</h2>
+                <h2 class="fs-6">{tag}</h2>
+            </section>
         </section>
     </a>
 </article>
@@ -26,13 +26,14 @@ const { src, description, title, tag, url } = Astro.props;
     article {
         max-height: 450px;
         img {
-            transform: translate(3rem,3rem) rotate(-3deg);
+
+            transform: translate(3rem,6rem) rotate(-3deg);
             transition: transform 0.5s ease-in-out;
         }
     }
     article:hover {
         img {
-            transform: translate(3rem,2.1rem) rotate(0deg) scale(1.1);
+            transform: translate(3rem,6rem) rotate(0deg) scale(1.1);
         }
     }
 </style>

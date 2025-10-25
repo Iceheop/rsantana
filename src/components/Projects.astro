@@ -4,13 +4,12 @@ import Card from "./Card.astro";
 const projects = await getCollection('projects');
 ---
 <section id="projects"> 
-    <header class=" mb-5">
-        <h1 class="m-0">Proyectos</h1>
-        <p class="text-secondary">Diseño y desarrollo de aplicaciones web.</p>
+    <header class=" mb-4">
+        <h2 class="m-0 fs-4 fw-bold">Proyectos</h2>
     </header>
-    {projects.map((project: any) => (
-        <>
-            <div transition:name={`hero-${project.slug}`}>
+    <section class="row gap-3">
+        {projects.map((project: any) => (
+            <div class="project-card" transition:name={`hero-${project.slug}`}>
                 <Card 
                     src={project.data.heroImage}
                     description={project.data.description}
@@ -19,7 +18,8 @@ const projects = await getCollection('projects');
                     url={`/projects/${project.slug}`}
                 />
             </div>
-            <br>
-        </>
-    ))}
+        ))}
+    </section>
 </section>
+
+

@@ -9,15 +9,13 @@ const projects = await getCollection('projects');
     </header>
     <section class="row gap-3">
         {projects.map((project: any) => (
-            <div class="project-card" transition:name={`hero-${project.slug}`}>
                 <Card 
                     src={project.data.heroImage}
                     description={project.data.description}
                     title={project.data.title}
                     tag={project.data.tag}
-                    url={`/projects/${project.slug}`}
+                    url={project.data.url}
                 />
-            </div>
         ))}
     </section>
 </section>

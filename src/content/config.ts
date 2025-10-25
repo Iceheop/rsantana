@@ -16,6 +16,8 @@ const projectsCollection = defineCollection({
       .transform((str) => (str ? new Date(str) : undefined)),
     heroImage: z.string().optional(),
     tag: z.string().optional(),
+    // Optional direct URL to the project (absolute https:// or root-relative /path)
+    url: z.string().optional(),
   }),
 });
 

@@ -10,16 +10,16 @@ const { src, description, title, tag, url } = Astro.props;
 ---
 
 <article>
-    <a href={url} class="text-decoration-none">
-        <section class="w-100 ratio ratio-16x9 rounded-2 overflow-hidden position-relative">
-            <img src={src} alt={description} class="img-fluid object-fit-scale rounded-2">
-            <section class="bg-dark w-100 h-100 opacity-50 position-absolute top-0 start-0"></section>
-            <section class="position-absolute bottom-0 start-0 w-100 p-4 text-white">
-                <h2 class="fs-5 fw-bold mb-1">{title}</h2>
-                <h2 class="fs-6">{tag}</h2>
+        <a href={url} class="text-decoration-none" target="_blank" rel="noopener noreferrer">
+            <section class="w-100 ratio ratio-16x9 rounded-2 overflow-hidden position-relative">
+                <img src={src} alt={description} class="img-fluid object-fit-scale rounded-2">
+                <section class="bg-dark w-100 h-100 opacity-50 position-absolute top-0 start-0"></section>
+                <section class="position-absolute bottom-0 start-0 w-100 p-4 text-white">
+                    <h2 class="fs-5 fw-bold mb-1">{title}</h2>
+                    <h2 class="fs-6">{tag}</h2>
+                </section>
             </section>
-        </section>
-    </a>
+        </a>
 </article>
 
 <style>

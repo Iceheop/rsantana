@@ -1,8 +1,39 @@
-- name: Deploy to cPanel via FTP
-  uses: SamKirkland/FTP-Deploy-Action@v4.3.0
-  with:
-    server: ${{ secrets.FTP_SERVER }}
-    username: ${{ secrets.FTP_USERNAME }}
-    password: ${{ secrets.FTP_PASSWORD }}
-    local-dir: dist
-    server-dir: rsantana.lat/rsantana
+name: Deploy Astro to cPanel
+
+on:
+  push:
+    branches:
+      - main   # Cambia si tu rama principal es diferente
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. Descargar tu repositorio
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      # 2. Instalar Node.js
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      # 3. Instalar dependencias
+      - name: Install dependencies
+        run: npm install
+
+      # 4. Compilar Astro
+      - name: Build Astro project
+        run: npm run build
+
+      # 5. Subir archivos al servidor cPanel vía FTP
+      - name: Deploy to cPanel via FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.0
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: dist
+          server-dir: rsantana.lat/rsantana

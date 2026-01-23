@@ -21,19 +21,3 @@ const { src, description, title, tag, url } = Astro.props;
             </section>
         </a>
 </article>
-
-<style>
-    article {
-        max-height: 450px;
-        img {
-
-            transform: translate(3rem,6rem) rotate(-3deg);
-            transition: transform 0.5s ease-in-out;
-        }
-    }
-    article:hover {
-        img {
-            transform: translate(3rem,6rem) rotate(0deg) scale(1.1);
-        }
-    }
-</style>

@@ -3,20 +3,28 @@ interface Props {
     src: string;
     description: string;
     title: string;
-    tag: string;
+    tags: string[];
     url: string;
 }
-const { src, description, title, tag, url } = Astro.props;
+const { src, description, title, tags, url } = Astro.props;
 ---
 
 <article>
-        <a href={url} class="text-decoration-none" target="_blank" rel="noopener noreferrer">
-            <section class="w-100 ratio ratio-16x9 rounded-2 overflow-hidden position-relative">
-                <img src={src} alt={description} class="img-fluid object-fit-scale rounded-2">
-            </section>
-            <section class="pt-4">
-                <h2 class="fs-5 fw-bold mb-1">{title}</h2>
-                <h2 class="fs-6">{tag}</h2>
-            </section>
-        </a>
+    <a href={url} class="text-decoration-none" target="_blank" rel="noopener noreferrer">
+        <section class="w-100 ratio ratio-16x9 rounded-2 overflow-hidden position-relative">
+            <img src={src} alt={description} class="img-fluid object-fit-scale rounded-2">
+        </section>
+        <section class="pt-4">
+            <h2 class="fs-5 fw-bold mb-1">{title}</h2>
+            <p class="fs-6">{description}</p>
+            {tags && (
+                <div class="d-flex flex-wrap gap-2 mt-2">
+                    {tags.map((t) => (
+                        <span class="badge bg-primary">{t}</span>
+                    ))}
+                </div>
+            )}
+        </section>
+    </a>
 </article>
+

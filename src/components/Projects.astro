@@ -10,11 +10,12 @@ const projects = await getCollection('projects');
     <section class="row gap-3">
         {projects.map((project: any) => (
             <Card 
-              src={project.data.heroImage}
+                            src={project.data.heroImage}
               description={project.data.description}
               title={project.data.title}
               tags={project.data.tags}
               url={project.data.url}
+                            slug={project.slug}
             />
         ))}
     </section>

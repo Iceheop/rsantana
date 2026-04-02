@@ -1,14 +1,17 @@
 ---
 title: 'ZOODOM - Rediseño web'
-description: 'Rediseño de la web del parque zoológico nacional.'
-pubDate: '01-01-2026'
-updatedDate: '04-01-2026'
-heroImage: '/Zoodom.png'
+description: 'Rediseño de la web del parque zoológico nacional ZOODOM.'
+pubDate: '2026-01-01'
+heroImage: './images/00-cover.webp'
 tags:
   - Web design
   - UX/UI
   - SEO
+status: 'completed'
+featured: true
+order: 1
 url: 'https://zoodom.lat/'
+repository: 'https://github.com/Iceheop/zoodom'
 ---
 
 ### Contexto 
@@ -23,7 +26,7 @@ Rediseño y reconstrucción de la web institucional sobre biodiversidad para mej
 
 ### Colores
 
-<img src="/zoodom-color.webp" alt="Colores" class="img-fluid w-100 mb-3" loading="lazy" />
+![Sistema de color del proyecto Zoodom](./images/40-ui-color-system.webp)
 
 ### Enlaces
 

@@ -5,10 +5,14 @@
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
+    "typecheck": "astro check",
+    "ci": "npm run typecheck && npm run build",
     "preview": "astro preview",
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^5.13.10"
+    "@astrojs/check": "^0.9.8",
+    "astro": "^5.13.10",
+    "typescript": "^5.9.3"
   }
 }

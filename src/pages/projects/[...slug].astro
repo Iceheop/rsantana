@@ -15,10 +15,11 @@ export async function getStaticPaths() {
 const project = Astro.props;
 const { Content } = await project.render();
 
-const dateFormatter = new Intl.DateTimeFormat('en-US', {
+const dateFormatter = new Intl.DateTimeFormat('es-DO', {
   day: 'numeric',
   month: 'short',
   year: 'numeric',
+  timeZone: 'UTC',
 });
 
 const publishedDate = dateFormatter.format(project.data.pubDate);
@@ -37,10 +38,12 @@ const publishedDate = dateFormatter.format(project.data.pubDate);
           <h1 class="fs-1 fw-bold" transition:name={`title-${project.slug}`}>{project.data.title}</h1>
           <p class="text-secondary m-0 mb-1">{project.data.description}</p>
           <div class="d-flex flex-wrap align-items-center gap-3 small text-secondary">
-              <p class="m-0">Publicado {publishedDate}</p>
+              <p class="m-0"><strong>Publicación:</strong> {publishedDate}</p>
           </div>
         </header>
-        <img src={project.data.heroImage} alt={project.data.description} class="img-fluid rounded-2 mb-4" transition:name={`hero-${project.slug}`}>
+        {project.data.heroImage && (
+          <img src={project.data.heroImage.src} alt={project.data.description} class="img-fluid rounded-2 mb-4" transition:name={`hero-${project.slug}`}>
+        )}
         <Content />
       </article>
       <Footer />

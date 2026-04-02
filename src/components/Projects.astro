@@ -1,24 +1,30 @@
 ---
-import { getCollection } from 'astro:content';
+import { getCollection, type CollectionEntry } from "astro:content";
 import Card from "./Card.astro";
-const projects = await getCollection('projects');
+
+const projects = (await getCollection("projects")).sort((a, b) => {
+	if (a.data.order !== b.data.order) return a.data.order - b.data.order;
+	return b.data.pubDate.getTime() - a.data.pubDate.getTime();
+});
 ---
-<section id="projects" class="animate-on-load animate-delay-3"> 
-    <header class=" mb-4">
-        <h2 class="m-0 fs-4 fw-bold">Proyectos</h2>
-    </header>
-    <section class="row gap-3">
-        {projects.map((project: any) => (
-            <Card 
-                            src={project.data.heroImage}
-              description={project.data.description}
-              title={project.data.title}
-              tags={project.data.tags}
-              url={project.data.url}
-                            slug={project.slug}
-            />
-        ))}
-    </section>
+
+<section id="projects" class="animate-on-load animate-delay-3">
+	<header class="mb-4">
+		<h2 class="m-0 fs-4 fw-bold">Proyectos</h2>
+	</header>
+	<section class="row gap-3">
+		{projects.map((project: CollectionEntry<"projects">) => (
+			<Card
+				src={project.data.heroImage}
+				description={project.data.description}
+				title={project.data.title}
+				tags={project.data.tags}
+				url={project.data.url}
+				repository={project.data.repository}
+				slug={project.slug}
+			/>
+		))}
+	</section>
 </section>
 
 

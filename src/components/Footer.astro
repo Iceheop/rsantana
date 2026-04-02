@@ -1,37 +1,23 @@
 <footer class="my-5 py-5 animate-on-load animate-delay-4">
-    <ul class="nav gap-4 mb-2 ">
-        <li class="nav-item">
-            <a class="nav-link fw-medium p-0 text-secondary" href="https://do.linkedin.com/in/rsantanadev">
-                <i class="bi bi-arrow-right"></i>
-                Linkedin
-            </a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link fw-medium p-0 text-secondary" href="https://github.com/Iceheop/">
-                <i class="bi bi-arrow-right"></i>
-                Github
-            </a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link fw-medium p-0  text-secondary" href="mailto:rsantana@outlook.com">
-                <i class="bi bi-arrow-right"></i>
-                Email
-            </a>
-        </li>
-    </ul>
-    <p class="m-0 mb-2">&copy; Diseñado y desarrollado por Ronald Santana 2025</p>
+	<ul class="nav gap-4 mb-2">
+		<li class="nav-item">
+			<a class="nav-link fw-medium p-0 text-secondary" href="https://do.linkedin.com/in/rsantanadev">
+				<i class="bi bi-arrow-right"></i>
+				Linkedin
+			</a>
+		</li>
+		<li class="nav-item">
+			<a class="nav-link fw-medium p-0 text-secondary" href="https://github.com/Iceheop/">
+				<i class="bi bi-arrow-right"></i>
+				Github
+			</a>
+		</li>
+		<li class="nav-item">
+			<a class="nav-link fw-medium p-0 text-secondary" href="mailto:rsantana@outlook.com">
+				<i class="bi bi-arrow-right"></i>
+				Email
+			</a>
+		</li>
+	</ul>
+	<p class="m-0 mb-2">&copy; Disenado y desarrollado por Ronald Santana 2025</p>
 </footer>
-
-<script>
-    function actualizarHora(): void {
-        const ahora = new Date();
-        const hora: string = ahora.toLocaleTimeString();
-        const horaElem = document.getElementById("hora");
-        if (horaElem) {
-            horaElem.textContent = hora;
-        }
-    }
-
-    actualizarHora();
-    setInterval(actualizarHora, 1000);
-</script>

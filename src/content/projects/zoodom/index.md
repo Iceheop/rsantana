@@ -26,15 +26,18 @@ La plataforma actual limita la comunicación institucional por problemas de dise
 
 - **Resultados clave:** Mejora de rendimiento de 60 → 99 (desktop); LCP 4s → 0.7s; Speed Index 6.4s → 0.8s; accesibilidad y mejores prácticas alcanzaron 100 en desktop. Sitio optimizado para SEO y preparado para despliegue en Vercel/Netlify.
 
-### Estructura del menú y secciones
 
-![Sitemap del proyecto ZOODOM](./images/sitemap.webp)
 
 ### Colores
 ![Sistema de color del proyecto ZOODOM](./images/color-system.webp)
 
-### Enlaces
+### Texture
+![Textura del proyecto ZOODOM](./images/textura.webp)
 
+### Logo
+![Logo del proyecto ZOODOM](./images/logo.webp)
+
+### Enlaces
 **Versión publicada:** 
 - [zoodom.lat](https://zoodom.lat/).
 - [Figma](https://www.figma.com/design/XMM37I0sKR6znHG1W0sxnw/ZOODOM?node-id=0-1&t=WxZEaVqm1xD6noRU-1).

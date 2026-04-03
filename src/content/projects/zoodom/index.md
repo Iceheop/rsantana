@@ -2,7 +2,7 @@
 title: 'ZOODOM - Rediseño web'
 description: 'Rediseño de la web del parque zoológico nacional ZOODOM.'
 pubDate: '2026-01-01'
-heroImage: './images/00-cover.webp'
+heroImage: './images/cover.webp'
 tags:
   - Web design
   - UX/UI
@@ -16,7 +16,9 @@ repository: 'https://github.com/Iceheop/zoodom'
 
 ### Contexto 
 
-Rediseño y reconstrucción de la web institucional sobre biodiversidad para mejorar usabilidad, accesibilidad y rendimiento móvil/desktop.
+El proyecto entregará un sitio web diseñado y desarrollado (Astro, HTML, CSS, JavaScript, Bootstrap) que sea responsivo, accesible (WCAG AA), optimizado para SEO básico y centrado en la experiencia del usuario. El rediseño busca resolver la baja frecuencia de visitas y la percepción de inconsistencia visual, priorizando fichas de especies y un calendario de eventos como contenidos clave para atraer visitas presenciales y mejorar la comunicación institucional.
+
+La plataforma actual limita la comunicación institucional por problemas de diseño, arquitectura de información y accesibilidad; muchos usuarios no visitan o rara vez visitan la web (las respuestas más votadas fueron Nunca y Rara vez), y encuentran información con dificultad o solo “fácil” en algunos casos. Esto reduce la capacidad del ZOODOM para convertir interés en visitas y participación.
 
 - **Rol:** Investigación de usuarios, arquitectura de la información, prototipado en Figma, creación de sistema de diseño y maquetación frontend.
 
@@ -24,9 +26,12 @@ Rediseño y reconstrucción de la web institucional sobre biodiversidad para mej
 
 - **Resultados clave:** Mejora de rendimiento de 60 → 99 (desktop); LCP 4s → 0.7s; Speed Index 6.4s → 0.8s; accesibilidad y mejores prácticas alcanzaron 100 en desktop. Sitio optimizado para SEO y preparado para despliegue en Vercel/Netlify.
 
-### Colores
+### Estructura del menú y secciones
 
-![Sistema de color del proyecto Zoodom](./images/40-ui-color-system.webp)
+![Sitemap del proyecto ZOODOM](./images/sitemap.webp)
+
+### Colores
+![Sistema de color del proyecto ZOODOM](./images/color-system.webp)
 
 ### Enlaces
 

@@ -33,16 +33,14 @@ const publishedDate = dateFormatter.format(project.data.pubDate);
           <li class="breadcrumb-item active" aria-current="page">{project.data.title}</li>
         </ol>
       </nav>
-      <article class="py-3">
-        <header class="mb-5">
-          <h1 class="fs-1 fw-bold" transition:name={`title-${project.slug}`}>{project.data.title}</h1>
-          <p class="text-secondary m-0 mb-1">{project.data.description}</p>
-          <div class="d-flex flex-wrap align-items-center gap-3 small text-secondary">
-              <p class="m-0"><strong>Publicación:</strong> {publishedDate}</p>
-          </div>
+      <article class="project-content py-4">
+        <header class="mb-3">
+          <h1 class="fs-1 fw-bold m-0" transition:name={`title-${project.slug}`}>{project.data.title}</h1>
+          <p class="text-secondary m-0">{project.data.description}</p>
+          <p class="m-0 text-secondary"><strong>Publicación:</strong> {publishedDate}</p>
         </header>
         {project.data.heroImage && (
-          <img src={project.data.heroImage.src} alt={project.data.description} class="img-fluid rounded-2 mb-4" transition:name={`hero-${project.slug}`}>
+          <img src={project.data.heroImage.src} alt={project.data.description} class="img-fluid rounded-2 mb-5" transition:name={`hero-${project.slug}`}>
         )}
         <Content />
       </article>
@@ -50,8 +48,25 @@ const publishedDate = dateFormatter.format(project.data.pubDate);
 </Layout>
 
 <style>
-  img {
+  :global(.project-content) {
+    min-width: 0;
+  }
+
+  :global(.project-content p) {
+    max-width: 100%;
+  }
+
+  :global(.project-content picture) {
+    display: block;
     width: 100%;
-    height: auto;
+    max-width: 100%;
+  }
+
+  :global(.project-content picture img),
+  :global(.project-content img) {
+    width: 100% !important;
+    max-width: 100%;
+    height: auto !important;
+    display: block;
   }
 </style>
